@@ -1,3 +1,4 @@
 #!/bin/bash
 
-nosetests --rednose -v -e _flymake.py
+pytest -W ignore::DeprecationWarning
+

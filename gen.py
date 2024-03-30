@@ -19,17 +19,17 @@ def underscore_to_uppercase(the_str):
     return the_str.upper()
 
 
-def underscore_to_camelcase(the_str):
+def underscore_to_upper_camelcase(the_str):
     the_list = the_str.split('_')
     return ''.join([each_str.title() for each_str in the_list])
 
 
-def underscore_to_lower_camelcase(the_str):
+def underscore_to_camelcase(the_str):
     the_list = the_str.split('_')
     return the_list[0] + ''.join([each_str.title() for each_str in the_list[1:]])
 
 
-the_module = sys.argv[1]
+cc_module = sys.argv[1]
 full_name = sys.argv[2]
 project_with_dash = os.path.basename(os.getcwd())
 project = dash_to_underscore(project_with_dash)
@@ -66,37 +66,37 @@ the_dict = {
 
     'PKG': underscore_to_uppercase(pkg),
     'MODULE': underscore_to_uppercase(module),
-    'PROJECT': underscore_to_camelcase(project),
+    'PROJECT': underscore_to_upper_camelcase(project),
     'PKG_NAME': underscore_to_uppercase(pkg_name),
-    'PROJECT_NAME': underscore_to_camelcase(project_name),
+    'PROJECT_NAME': underscore_to_upper_camelcase(project_name),
     'INCLUDE_PKG': underscore_to_uppercase(include_pkg),
     'PACKAGE_DIR': underscore_to_uppercase(package_dir),
     'INCLUDE_PACKAGE_DIR': underscore_to_uppercase(include_package_dir),
     'TEST_PACKAGE_DIR': underscore_to_uppercase(test_package_dir),
 
-    'Pkg': underscore_to_camelcase(pkg),
-    'Module': underscore_to_camelcase(module),
-    'Project': underscore_to_camelcase(project),
-    'PkgName': underscore_to_camelcase(pkg_name),
-    'ProjectName': underscore_to_camelcase(project_name),
-    'IncludePkg': underscore_to_camelcase(include_pkg),
-    'PackageDir': underscore_to_camelcase(package_dir),
-    'IncludePackageDir': underscore_to_camelcase(include_package_dir),
-    'TestPackageDir': underscore_to_camelcase(test_package_dir),
+    'Pkg': underscore_to_upper_camelcase(pkg),
+    'Module': underscore_to_upper_camelcase(module),
+    'Project': underscore_to_upper_camelcase(project),
+    'PkgName': underscore_to_upper_camelcase(pkg_name),
+    'ProjectName': underscore_to_upper_camelcase(project_name),
+    'IncludePkg': underscore_to_upper_camelcase(include_pkg),
+    'PackageDir': underscore_to_upper_camelcase(package_dir),
+    'IncludePackageDir': underscore_to_upper_camelcase(include_package_dir),
+    'TestPackageDir': underscore_to_upper_camelcase(test_package_dir),
 
-    'pkgLCamel': underscore_to_lower_camelcase(pkg),
-    'moduleLCamel': underscore_to_lower_camelcase(module),
-    'projectLCamel': underscore_to_lower_camelcase(project),
-    'pkgName': underscore_to_lower_camelcase(pkg_name),
-    'projectName': underscore_to_lower_camelcase(project_name),
-    'includePkg': underscore_to_lower_camelcase(include_pkg),
-    'packageDir': underscore_to_lower_camelcase(package_dir),
-    'includePackageDir': underscore_to_lower_camelcase(include_package_dir),
-    'testPackageDir': underscore_to_lower_camelcase(test_package_dir)
+    'pkgCamel': underscore_to_camelcase(pkg),
+    'moduleCamel': underscore_to_camelcase(module),
+    'projectCamel': underscore_to_camelcase(project),
+    'pkgName': underscore_to_camelcase(pkg_name),
+    'projectName': underscore_to_camelcase(project_name),
+    'includePkg': underscore_to_camelcase(include_pkg),
+    'packageDir': underscore_to_camelcase(package_dir),
+    'includePackageDir': underscore_to_camelcase(include_package_dir),
+    'testPackageDir': underscore_to_camelcase(test_package_dir)
 }
 
 cookiecutter(
-    '.cc/' + the_module,
+    '.cc/' + cc_module,
     extra_context=the_dict,
     no_input=True,
     overwrite_if_exists=True,
