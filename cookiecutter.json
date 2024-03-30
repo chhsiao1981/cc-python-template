@@ -33,9 +33,9 @@
   "IncludePackageDir": "",
   "TestPackageDir": "",
 
-  "pkgLCamel": "",
-  "moduleLCamel": "",
-  "projectLCamel": "",
+  "pkgCamel": "",
+  "moduleCamel": "",
+  "projectCamel": "",
   "pkgName": "",
   "projectName": "",
   "includePkg": "",
