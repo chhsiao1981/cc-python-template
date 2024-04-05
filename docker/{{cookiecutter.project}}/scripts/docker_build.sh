@@ -1,6 +1,8 @@
 #!/bin/bash
 
-branch=`git status|head -1|sed -E 's/^HEAD detached at //g'|sed -E 's/^On branch //g'`
+branch=`git rev-parse --abbrev-ref HEAD`
+if [ "${branch}" == "HEAD" ]; then branch=`git describe --tags`; fi
+
 project=`basename \`pwd\``
 
 echo -e "\033[1;32m[INFO]\033[m to build ${project}:${branch}"
