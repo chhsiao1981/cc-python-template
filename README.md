@@ -24,7 +24,7 @@ currently the following variables are defined (using `a.b.c.d` in the project di
 * `include_package_dir`: (ex: `awesome_project/a/b/c`)
 * `test_package_dir`: (ex: `test_a/test_b/test_c`)
 
-Uppercase:
+UPPERCASE:
 * `PKG`: UPPERCASE of `pkg` (ex: `AWESOME_PROJECT.A.B.C`)
 * `MODULE`: UPPERCASE of `module` (ex: `D`)
 * `PROJECT` UpperCamelCase of `project_name` (ex: `AwesomeProject`)
