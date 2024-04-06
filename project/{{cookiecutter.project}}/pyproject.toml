@@ -1,0 +1,37 @@
+[build-system]
+requires = [
+    "setuptools",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "{{cookiecutter.project_name_with_dash}}"
+version = "0.0.1"
+dependencies = [
+]
+authors = [
+    #    {name = "", email = ""},
+]
+description = ""
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+keywords = [
+]
+classifiers = [
+    'Programming Language :: Python :: 3',
+    'Operating System :: OS Independent',
+]
+
+[project.urls]
+# Homepage      = ""
+# Documentation = ""
+# Repository    = ""
+# "Bug Tracker" = ""
+# Changelog = ""
+
+[project.scripts]
+
+[tool.setuptools.packages.find]
+exclude = [
+    "tests*",
+]
