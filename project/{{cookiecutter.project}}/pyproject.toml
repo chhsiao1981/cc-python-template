@@ -1,20 +1,20 @@
 [build-system]
 requires = [
-    "setuptools",
+    'setuptools',
 ]
-build-backend = "setuptools.build_meta"
+build-backend = 'setuptools.build_meta'
 
 [project]
-name = "{{cookiecutter.project_name_with_dash}}"
-version = "0.0.1"
+name = '{{cookiecutter.project_name_with_dash}}'
+version = '0.0.1'
 dependencies = [
 ]
 authors = [
-    #    {name = "", email = ""},
+    # {name = '', email = ''},
 ]
-description = ""
-readme = "README.md"
-license = {file = "LICENSE.txt"}
+description = ''
+readme = 'README.md'
+license = {file = 'LICENSE.txt'}
 keywords = [
 ]
 classifiers = [
@@ -23,15 +23,15 @@ classifiers = [
 ]
 
 [project.urls]
-# Homepage      = ""
-# Documentation = ""
-# Repository    = ""
-# "Bug Tracker" = ""
-# Changelog = ""
+# Homepage      = ''
+# Documentation = ''
+# Repository    = ''
+# 'Bug Tracker' = ''
+# Changelog = ''
 
 [project.scripts]
 
 [tool.setuptools.packages.find]
 exclude = [
-    "tests*",
+    'tests*',
 ]
