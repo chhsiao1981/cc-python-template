@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # virtualenv_dir
-virtualenv_dir="${BASH_ARGV[0]:-__}"
+virtualenv_dir="${BASH_ARGV[0]:-.venv}"
 
 # cc_dir
 cc_dir="${BASH_ARGV[1]:-.cc}"
@@ -70,4 +70,4 @@ fi
 
 # done
 echo -e "\033[1;32m[INFO]\033[m done"
-echo -e "\033[1;32m[INFO]\033[m remember to: \033[1;32m. ${virtualenv_dir}/bin/activate\033[m"
+echo -e "\033[1;32m[INFO]\033[m remember to: \033[1;32msource ${virtualenv_dir}/bin/activate\033[m"
