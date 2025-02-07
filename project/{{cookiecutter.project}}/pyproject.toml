@@ -14,7 +14,7 @@ authors = [
 ]
 description = ''
 readme = 'README.md'
-license = {file = 'LICENSE.txt'}
+license = {file = 'LICENSE'}
 keywords = [
 ]
 classifiers = [
@@ -34,4 +34,18 @@ classifiers = [
 [tool.setuptools.packages.find]
 exclude = [
     'tests*',
+]
+[tool.flake8]
+max-line-length = 100
+extend-ignore = [
+    # See https://github.com/PyCQA/pycodestyle/issues/373
+    'E203',
+]
+exclude = [
+    '.git',
+    '__pycache__',
+    '.cc',
+    '.github',
+    '__init__.py',
+    '.venv',
 ]
